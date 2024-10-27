@@ -79,14 +79,14 @@ List parsePostFix(String r, int idx, dynamic node) {
 
   var ch = r[idx];
   idx += 1;
-  int rmin, rmax;
+  var rmin, rmax;
 
   if (ch == '*') {
     rmin = 0;
-    rmax = double.infinity.toInt();
+    rmax = double.infinity;
   } else if (ch == '+') {
     rmin = 1;
-    rmax = double.infinity.toInt();
+    rmax = double.infinity;
   } else {
     var result = parseInt(r, idx);
     idx = result[0];
